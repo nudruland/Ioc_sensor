@@ -40,7 +40,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 				Difference = (0xffff - IC_Val1) + IC_Val2;
 			}
 
-			Distance = Difference * .034/2;
+			Distance = Difference / 56;
 			Is_First_Captured = 0; // set it back to false
 
 			// set polarity to rising edge
